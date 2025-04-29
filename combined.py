@@ -1,6 +1,3 @@
-# Install libraries if needed:
-# pip install streamlit pandas numpy scikit-learn imbalanced-learn matplotlib plotly
-
 import streamlit as st
 import pandas as pd
 import numpy as np
