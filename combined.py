@@ -106,12 +106,8 @@ if uploaded_file:
         y = df['Priority']
         X = X.select_dtypes(include=[np.number])
 
-        # ✅ Safe Patch: Encode y if needed
+        # Dynamic balancing
         if len(X) > 100:
-            if y.dtype == 'object' or y.dtype.name == 'category':
-                y_encoder = LabelEncoder()
-                y = y_encoder.fit_transform(y)
-
             smoteenn = SMOTEENN(random_state=42)
             X_balanced, y_balanced = smoteenn.fit_resample(X, y)
         else:
