@@ -1,3 +1,6 @@
+# Install libraries if needed:
+# pip install streamlit pandas numpy scikit-learn imbalanced-learn matplotlib plotly
+
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -130,7 +133,7 @@ if uploaded_file:
         col1, col2, col3 = st.columns(3)
         with col1:
             high_count = int((df['Predicted_Priority_Label'] == 'High').sum())
-            st.metric(label="🔴 High Priority", value=high_count)
+            st.metric(label="🔥 High Priority", value=high_count)
         with col2:
             medium_count = int((df['Predicted_Priority_Label'] == 'Medium').sum())
             st.metric(label="🟡 Medium Priority", value=medium_count)
