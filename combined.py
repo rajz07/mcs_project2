@@ -149,7 +149,7 @@ if uploaded_file:
         st.subheader("🔍 Final Prioritized Data")
         st.dataframe(df, use_container_width=True)
 
-    with tab3:
+    
         st.subheader("📥 Download Prioritized Dataset")
 
         csv = df.to_csv(index=False)
