@@ -80,7 +80,7 @@ if uploaded_file:
     # ===============================
     # 🔥 Tabs for Workflow
     # ===============================
-    tab1, tab2 = st.tabs(["🔍 Data Preview", "⚙️ Model Training", "📥 Download"])
+    tab1, tab2 = st.tabs(["🔍 Data Preview", "⚙️ Model Training"])
 
     with tab1:
         st.subheader("🔍 Raw and Preprocessed Data")
@@ -149,7 +149,7 @@ if uploaded_file:
         st.subheader("🔍 Final Prioritized Data")
         st.dataframe(df, use_container_width=True)
 
-    
+    with tab3:
         st.subheader("📥 Download Prioritized Dataset")
 
         csv = df.to_csv(index=False)
